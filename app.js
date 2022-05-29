@@ -36,7 +36,7 @@ const vue = Vue.createApp({
       el.setAttribute('readonly', '')
       el.style.position = 'absolute'
       el.style.left = '-9999px'
-      el.value = `transform: ${this.box.transform}`;
+      el.value = `transform: ${this.box.transform}, background: ${this.box.background}`;
 
       document.body.appendChild(el)
       el.select()
