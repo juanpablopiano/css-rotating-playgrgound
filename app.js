@@ -25,6 +25,19 @@ const vue = Vue.createApp({
       this.rotateX = 0;
       this.rotateY = 0;
       this.rotateZ = 0;
+    },
+    copy() {
+      // navigator.clipboard.writeText(JSON.stringify(`transform: ${this.box.transform.replace(/\n/g, '').trim()}`))
+      const el = document.createElement('textarea')
+      el.setAttribute('readonly', '')
+      el.style.position = 'absolute'
+      el.style.left = '-9999px'
+      el.value = `transform: ${this.box.transform}`;
+
+      document.body.appendChild(el)
+      el.select()
+      document.execCommand('copy')
+      document.body.removeChild(el);
     }
   }
 }).mount('#app');
