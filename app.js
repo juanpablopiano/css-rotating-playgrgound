@@ -5,6 +5,9 @@ const vue = Vue.createApp({
       rotateX: 0,
       rotateY: 0,
       rotateZ: 0,
+      red: 141,
+      green: 129,
+      blue: 243,
     };
   },
   computed: {
@@ -15,7 +18,8 @@ const vue = Vue.createApp({
           rotateX(${this.rotateX}deg)
           rotateY(${this.rotateY}deg)
           rotateZ(${this.rotateZ}deg)
-        `
+        `,
+        background: `rgb(${this.red} ${this.green} ${this.blue})`,
       };
     },
   },
